@@ -16,6 +16,10 @@
 							@endphp
 							<p class="text">@foreach($settings as $data) {{$data->short_des}} @endforeach</p>
 							<p class="call">Got Question? Call us 24/7<span><a href="tel:123456789">@foreach($settings as $data) {{$data->phone}} @endforeach</a></span></p>
+							<p class="email">
+                            	<i class="fas fa-envelope"></i> 
+                            	<a href="mailto:@foreach($settings as $data) {{$data->email}} @endforeach">@foreach($settings as $data) {{$data->email}} @endforeach</a>
+                        	</p>
 						</div>
 						<!-- End Single Widget -->
 					</div>
@@ -26,7 +30,7 @@
 							<ul>
 								<li><a href="{{route('about-us')}}">About Us</a></li>
 								<li><a href="{{ route('faq') }}">FAQ</a></li>
-								<li><a href="#">Terms & Conditions</a></li>
+								<li><a href="{{ route('termconditions') }}">Terms & Conditions</a></li>
 								<li><a href="{{route('contact')}}">Contact Us</a></li>
 								<li><a href="#">Help</a></li>
 							</ul>
@@ -41,8 +45,8 @@
 								<li><a href="#">Payment Methods</a></li>
 								<li><a href="#">Money-back</a></li>
 								<li><a href="#">Returns</a></li>
-								<li><a href="#">Shipping</a></li>
-								<li><a href="#">Privacy Policy</a></li>
+								<li><a href="{{route('order.track')}}">Shipping</a></li>
+								<li><a href="{{route('privacypolicy')}}">Privacy Policy</a></li>
 							</ul>
 						</div>
 						<!-- End Single Widget -->
@@ -54,14 +58,14 @@
 							<!-- End Single Widget -->
                             <div class="social-links">
                                 <div class="social-icons">
-                                    <a href="https://facebook.com/yourprofile" target="_blank" class="youtube">
+                                    <a href="https://youtube.com/@luxaroma-1610?si=fTNfZXyp2AAnCWzU" target="_blank" class="youtube">
                                         <i class="fab fa-youtube"></i>
                                     </a>
                                     </a>
-                                    <a href="https://instagram.com/yourprofile" target="_blank" class="instagram">
+                                    <a href="https://www.instagram.com/luxaroma_parfume_store?igsh=ajRmZXlocDBnOWMz" target="_blank" class="instagram">
                                         <i class="fab fa-instagram" ></i>
                                     </a>
-                                    <a href="https://tiktok.com/yourprofile" target="_blank" class="tiktok">
+                                    <a href="https://www.tiktok.com/@luxaroma_store?is_from_webapp=1&sender_device=pc" target="_blank" class="tiktok">
                                         <img src="{{asset('backend/img/black.png')}}" alt="TikTok">
                                     </a>
                                 </div>
