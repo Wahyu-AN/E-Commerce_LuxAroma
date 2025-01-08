@@ -18,127 +18,79 @@
 </div>
 <!-- End Breadcrumbs -->
 
-<!-- FAQ Section -->
-<section class="faq section">
-    <div class="container">
+<section class="privacypolicy section">
+    <div class="container" style="background: #f9f9f9; padding: 40px 20px;">
         <div class="row">
-            <div class="row">
-                <div class="col-12">
-                    <div class="section-title">
-                        <h2>Afiliate LuxAroma</h2>
-                    </div>
-                </div>
-            </div>
             <div class="col-12">
-                <div class="faq-content">
-                    <h3>Pertanyaan yang Sering Diajukan</h3>
-                    <div class="accordion" id="faqAccordion">
+                <div class="about-content" style="background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);">
+                    <h3 style="font-size: 28px; font-weight: bold; margin-bottom: 20px; text-align: center; color: #333;">
+                        LuxAroma Afiliate
+                    </h3>
+                    
+                    <p style="padding-left: 20px; font-size: 1em; line-height: 1.8; color: #555; margin-bottom: 10px;">
+                       <center>
+                       The affiliate program at "LuxAroma" offers incentives to third parties, such as influencers or active users, 
+                        to promote LuxAroma products using referral links or special codes. Each successful transaction made through these links 
+                        or codes generates a commission for the affiliate.
+                       </center>
+                        <br>
+                    </p>
 
-                        <!-- Question 1 -->
-                        <div class="card">
-                            <div class="card-header" id="headingOne">
-                                <h5 class="mb-0">
-                                    <button class="btn btn-link" type="button" data-toggle="collapse"
-                                        data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                        Apa saja bahan yang digunakan dalam parfum LuxAroma?
-                                    </button>
-                                </h5>
-                            </div>
-                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
-                                data-parent="#faqAccordion">
-                                <div class="card-body">
-                                    Parfum LuxAroma dibuat menggunakan minyak esensial berkualitas tinggi, ekstrak
-                                    alami, dan bahan sintetis yang aman untuk menciptakan aroma yang unik dan tahan
-                                    lama.
-                                </div>
-                            </div>
-                        </div>
+                    <h4 style="font-size: 1.3em; font-weight: bold; color: #333; margin-bottom: 10px;">
+                        Affiliate Process Flow</h4>
+                    <!-- 1 -->
+                    <h4 style="font-size: 1.3em; font-weight: bold; color: #333; margin-bottom: 10px;">
+                        1. Registration</h4>
+                    <p style="padding-left: 20px; font-size: 1em; line-height: 1.8; color: #555; margin-bottom: 10px;">
+                        Sign up on the LuxAroma platform, fill out personal information, and complete the verification process via email.
+                        <br>
+                    </p>
 
-                        <!-- Question 2 -->
-                        <div class="card">
-                            <div class="card-header" id="headingTwo">
-                                <h5 class="mb-0">
-                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
-                                        data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                        Bagaimana cara menyimpan parfum dengan benar?
-                                    </button>
-                                </h5>
-                            </div>
-                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
-                                data-parent="#faqAccordion">
-                                <div class="card-body">
-                                    Simpan parfum Anda di tempat yang sejuk dan kering, jauh dari sinar matahari
-                                    langsung dan panas untuk menjaga kualitas dan ketahanannya.
-                                </div>
-                            </div>
-                        </div>
+                    <!-- 2 -->
+                    <h4 style="font-size: 1.3em; font-weight: bold; color: #333; margin-bottom: 10px;">
+                        2. Access Dashboard</h4>
+                    <p style="padding-left: 20px; font-size: 1em; line-height: 1.8; color: #555; margin-bottom: 10px;">
+                        Log in to the dashboard to obtain a unique referral link or code.
+                        <br>
+                    </p>
 
-                        <!-- Question 3 -->
-                        <div class="card">
-                            <div class="card-header" id="headingThree">
-                                <h5 class="mb-0">
-                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
-                                        data-target="#collapseThree" aria-expanded="false"
-                                        aria-controls="collapseThree">
-                                        Apakah parfum LuxAroma diuji pada hewan?
-                                    </button>
-                                </h5>
-                            </div>
-                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
-                                data-parent="#faqAccordion">
-                                <div class="card-body">
-                                    Tidak, LuxAroma berkomitmen pada praktik bebas kekejaman dan tidak menguji produk
-                                    apa pun pada hewan.
-                                </div>
-                            </div>
-                        </div>
+                    <!-- 3 -->
+                    <h4 style="font-size: 1.3em; font-weight: bold; color: #333; margin-bottom: 10px;">
+                        3. Promotion</h4>
+                    <p style="padding-left: 20px; font-size: 1em; line-height: 1.8; color: #555; margin-bottom: 10px;">
+                        Affiliates promote products using the link or code across various online platforms, such as social media, blogs, or personal websites.
+                        <br>
+                    </p>
 
-                        <!-- Question 4 -->
-                        <div class="card">
-                            <div class="card-header" id="headingFour">
-                                <h5 class="mb-0">
-                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
-                                        data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                        Berapa lama aroma parfum dapat bertahan?
-                                    </button>
-                                </h5>
-                            </div>
-                            <div id="collapseFour" class="collapse" aria-labelledby="headingFour"
-                                data-parent="#faqAccordion">
-                                <div class="card-body">
-                                    Ketahanan parfum kami tergantung pada jenis kulit individu, tetapi sebagian besar
-                                    parfum LuxAroma bertahan antara 6 hingga 12 jam.
-                                </div>
-                            </div>
-                        </div>
+                    <!-- 4 -->
+                    <h4 style="font-size: 1.3em; font-weight: bold; color: #333; margin-bottom: 10px;">
+                        4. Commission Tracking and Calculation</h4>
+                    <p style="padding-left: 20px; font-size: 1em; line-height: 1.8; color: #555; margin-bottom: 10px;">
+                    Commissions are calculated based on the number of products sold:
+                        <br>
+                    </p>
+                    <ul style="padding-left: 40px; list-style: disc; font-size: 1em; line-height: 1.8; color: #555; margin-bottom: 20px;">
+                        <li>3% for 1–20 products.</li>
+                        <li>5% for 21–60 products.</li>
+                        <li>7% for more than 60 products.</li>
+                    </ul>
 
-                    </div>
+                    <!-- 5 -->
+                    <h4 style="font-size: 1.3em; font-weight: bold; color: #333; margin-bottom: 10px;">
+                        5. Commission Payment</h4>
+                    <ul style="padding-left: 40px; list-style: disc; font-size: 1em; line-height: 1.8; color: #555; margin-bottom: 20px;">
+                        <li>Commissions accumulate in the affiliate account until reaching the minimum payout threshold (e.g., Rp100,000).</li>
+                        <li>Payments are made periodically, such as at the end of each month.</li>
+                        <li>Affiliates receive a notification once the payment is successfully processed.</li>
+                    </ul>
+                    <div class="button">
+								<a href="#" class="btn primary">Join Afiliate</a>
+							</div>
                 </div>
             </div>
         </div>
     </div>
 </section>
-<!-- End FAQ Section -->
-
-<!-- Start Shop Newsletter  -->
-@include('frontend.layouts.joinAfiliate')
-<!-- End Shop Newsletter -->
-<!--================Contact Success  =================-->
-<div class="modal fade" id="success" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2 class="text-success">Thank you!</h2>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <p class="text-success">Your message is successfully sent...</p>
-            </div>
-        </div>
-    </div>
-</div>
 
 <!-- Modals error -->
 <div class="modal fade" id="error" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
