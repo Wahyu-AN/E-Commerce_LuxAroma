@@ -61,6 +61,16 @@
         return view('frontend.pages.faq');
     })->name('faq');
 
+// Frontend Routes
+    Route::get('/privacypolicy', function () {
+        return view('frontend.pages.privacypolicy');
+    })->name('privacypolicy');
+
+// Frontend Routes
+    Route::get('/termconditions', function () {
+        return view('frontend.pages.termconditions');
+    })->name('termconditions');
+
     Route::get('/home', [FrontendController::class, 'index']);
     Route::get('/about-us', [FrontendController::class, 'aboutUs'])->name('about-us');
     Route::get('/contact', [FrontendController::class, 'contact'])->name('contact');
