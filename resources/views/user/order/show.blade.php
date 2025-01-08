@@ -70,13 +70,6 @@
                         <td> : {{$order->created_at->format('D d M, Y')}} at {{$order->created_at->format('g : i a')}} </td>
                     </tr>
                     <tr>
-                        @foreach(Helper::getAllProductFromCart() as $key=>$cart)
-                        <td>Product-Name</td>
-                        <td> : {{$cart->product['title']}}</td>
-                        @endforeach
-
-                    </tr>
-                    <tr>
                         <td>Quantity</td>
                         <td> : {{$order->quantity}}</td>
                     </tr>

@@ -71,10 +71,6 @@
                         <td> : {{$order->created_at->format('D d M, Y')}} at {{$order->created_at->format('g : i a')}} </td>
                     </tr>
                     <tr>
-                        <td>Product-Name</td>
-                        <td> : ZARA SENSUAL VANILLA</td>
-                    </tr>
-                    <tr>
                         <td>Quantity</td>
                         <td> : {{$order->quantity}}</td>
                     </tr>
