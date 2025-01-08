@@ -2,6 +2,14 @@
 
  <img src="public/photos/gambar 1.png">
 
+ <img src="public/photos/gambar 8.png">
+ 
+ <img src="public/photos/gambar 7.png">
+
+ <img src="public/photos/gambar 9.png">
+
+ <img src="public/photos/gambar 13.png">
+
 
 ## Langkah-Langkah
 
