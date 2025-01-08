@@ -5,6 +5,11 @@
 - cd E-Commerce_LuxAroma
 - code .
 
+ 
+ <img src=""home">
+
+
+
 2. Ubah .env.example menjadi .env
    
 4. Kemudian import file sql yang ada di /E-Commerce_LuxArome/database /Database_LuxAroma.sql
