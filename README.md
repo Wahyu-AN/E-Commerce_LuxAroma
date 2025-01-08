@@ -1,14 +1,14 @@
+## Documentasi
+
+ <img src="public/photos/gambar 1.png">
+
+
 ## Langkah-Langkah
 
 1. Buat folder baru atau lokasi untuk menjalankan gitbash dengan perintah:
 - git clone https://github.com/Wahyu-AN/E-Commerce_LuxAroma.git
 - cd E-Commerce_LuxAroma
 - code .
-
- 
- <img src=""home">
-
-
 
 2. Ubah .env.example menjadi .env
    
