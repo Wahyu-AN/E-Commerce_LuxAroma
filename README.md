@@ -3,7 +3,7 @@
 'Home'
  <img src="public/photos/gambar 1.png">
 
-'Login
+'Login'
  <img src="public/photos/gambar 11.png">
 
 'About Us'
