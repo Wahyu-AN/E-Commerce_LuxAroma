@@ -1,3 +1,26 @@
+## Documentasi
+
+'Home'
+ <img src="public/photos/gambar 1.png">
+
+'Login'
+ <img src="public/photos/gambar 11.png">
+
+'About Us'
+ <img src="public/photos/gambar 2.png">
+ 
+'Dashboard'
+ <img src="public/photos/gambar 7.png">
+
+'Beranda-FAQ'
+ <img src="public/photos/gambar 9.png">
+
+'User'
+ <img src="public/photos/gambar 13.png">
+
+ 
+
+
 ## Langkah-Langkah
 
 1. Buat folder baru atau lokasi untuk menjalankan gitbash dengan perintah:
