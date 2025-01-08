@@ -593,6 +593,25 @@ INSERT INTO `shippings` (`id`, `type`, `price`, `status`, `created_at`, `updated
 (2, 'JNT', 30000.00, 'active', '2024-12-26 03:07:58', '2024-12-26 03:07:58'),
 (3, 'SICEPAT', 15000.00, 'active', '2024-12-26 03:08:12', '2024-12-26 03:08:12');
 
+CREATE TABLE `transactions` (
+    `id` BIGINT(20) UNSIGNED NOT NULL AUTO_INCREMENT,
+    `user_id` BIGINT(20) UNSIGNED NOT NULL,
+    `afiliator_id` BIGINT(20) UNSIGNED NOT NULL,
+    `quantity` INT(11) NOT NULL,
+    `total` DECIMAL(10,2) NOT NULL,
+    `revenue` DECIMAL(10,2) NOT NULL,
+    `status` VARCHAR(255) NOT NULL,
+    `created_at` TIMESTAMP NULL DEFAULT NULL,
+    `updated_at` TIMESTAMP NULL DEFAULT NULL,
+    PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+
+INSERT INTO `transactions` (`id`, `user_id`, `afiliator_id`, `quantity`, `total`, `revenue`, `status`, `created_at`, `updated_at`) VALUES
+(1, 4, 1, 5, 500.00, 50.00, 'completed', NOW(), NOW()),
+(2, 9, 1, 10, 1000.00, 100.00, 'pending', NOW(), NOW()),
+(3, 10, 1, 3, 300.00, 30.00, 'completed', NOW(), NOW());
+
 -- --------------------------------------------------------
 
 --
@@ -606,7 +625,7 @@ CREATE TABLE `users` (
   `email_verified_at` timestamp NULL DEFAULT NULL,
   `password` varchar(191) DEFAULT NULL,
   `photo` varchar(191) DEFAULT NULL,
-  `role` enum('admin','user') NOT NULL DEFAULT 'user',
+  `role` enum('admin','user','afiliator') NOT NULL DEFAULT 'user',
   `provider` varchar(191) DEFAULT NULL,
   `provider_id` varchar(191) DEFAULT NULL,
   `status` enum('active','inactive') NOT NULL DEFAULT 'active',
@@ -623,7 +642,9 @@ INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `ph
 (1, 'Wahyu Adi Nugroho', 'tootes202@gmail.com', NULL, '$2y$10$e3M5J0aLVmRkX0QTxeQUzOAyKacXVyNw/0I72EUP2wrQ/Fi6SVkza', 'http://localhost/storage/photos/1/WhatsApp Image 2024-12-25 at 15.26.14_278e6021.jpg', 'admin', NULL, NULL, 'active', NULL, '2024-10-17 03:00:03', '2025-01-04 00:57:48'),
 (4, 'Rizky', 'Rizky@gmail.com', NULL, '$2y$10$.vAPZLdIHcgdqNU5NpRoHOv3BIILF3D4RbF1WWrM7ZwYXSuwCFk2W', NULL, 'user', NULL, NULL, 'active', NULL, '2025-01-02 08:04:05', '2025-01-02 08:04:05'),
 (9, 'muhammad rofqy', 'muhammadrofqy123@gmail.com', NULL, '$2y$10$JrbJty1HVT0z2CyPysvD3.9iXEY6X0yGRAjuDdT.cuSV7aXkl94Te', NULL, 'user', NULL, NULL, 'active', NULL, '2025-01-03 21:59:05', '2025-01-03 21:59:05'),
-(10, 'rofqy', 'rofqy123@gmail.com', NULL, '$2y$10$Gws2wu794xyAYhlCdy25tOECl0zOLy59x6bxhMtU9h3bqeVNAalKW', NULL, 'user', NULL, NULL, 'active', NULL, '2025-01-03 22:03:44', '2025-01-04 00:50:07');
+(10, 'rofqy', 'rofqy123@gmail.com', NULL, '$2y$10$Gws2wu794xyAYhlCdy25tOECl0zOLy59x6bxhMtU9h3bqeVNAalKW', NULL, 'user', NULL, NULL, 'active', NULL, '2025-01-03 22:03:44', '2025-01-04 00:50:07'),
+(11, 'Afiliator User', 'afiliator@gmail.com', NULL, '$2y$10$e3M5J0aLVmRkX0QTxeQUzOAyKacXVyNw/0I72EUP2wrQ/Fi6SVkza', NULL, 'afiliator', NULL, NULL, 'active', NULL, NOW(), NOW());
+
 
 -- --------------------------------------------------------
 
@@ -632,15 +653,15 @@ INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `ph
 --
 
 CREATE TABLE `wishlists` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `product_id` bigint(20) UNSIGNED NOT NULL,
-  `cart_id` bigint(20) UNSIGNED DEFAULT NULL,
-  `user_id` bigint(20) UNSIGNED DEFAULT NULL,
-  `price` double(8,2) NOT NULL,
-  `quantity` int(11) NOT NULL,
-  `amount` double(8,2) NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
+    `id` bigint(20) UNSIGNED NOT NULL,
+    `product_id` bigint(20) UNSIGNED NOT NULL,
+    `cart_id` bigint(20) UNSIGNED DEFAULT NULL,
+    `user_id` bigint(20) UNSIGNED DEFAULT NULL,
+    `price` double(8,2) NOT NULL,
+    `quantity` int(11) NOT NULL,
+    `amount` double(8,2) NOT NULL,
+    `created_at` timestamp NULL DEFAULT NULL,
+    `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -822,6 +843,10 @@ ALTER TABLE `wishlists`
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+ALTER TABLE `transactions`
+    ADD CONSTRAINT `fk_user_id` FOREIGN KEY (`user_id`) REFERENCES `users`(`id`) ON DELETE CASCADE,
+    ADD CONSTRAINT `fk_afiliator_id` FOREIGN KEY (`afiliator_id`) REFERENCES `users`(`id`) ON DELETE CASCADE;
 
 --
 -- AUTO_INCREMENT for table `banners`

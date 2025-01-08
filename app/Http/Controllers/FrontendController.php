@@ -47,6 +47,9 @@ class FrontendController extends Controller
     public function contact(){
         return view('frontend.pages.contact');
     }
+    public function afiliate(){
+        return view('frontend.pages.afiliate');
+    }
 
     public function productDetail($slug){
         $product_detail= Product::getProductBySlug($slug);

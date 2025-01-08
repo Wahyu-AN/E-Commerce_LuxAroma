@@ -69,5 +69,18 @@ class LoginController extends Controller
             ]);
          return redirect()->route('home');
         }
+        if($afiliator){
+            Auth::login($afiliator);
+            return redirect('/afiliator/transactions')->with('success','You are login from '.$provider);
+        }else{
+            $user = User::create([
+                'name'          => $userSocial->getName(),
+                'email'         => $userSocial->getEmail(),
+                'image'         => $userSocial->getAvatar(),
+                'provider_id'   => $userSocial->getId(),
+                'provider'      => $provider,
+            ]);
+         return redirect()->route('home');
+        }
     }
 }

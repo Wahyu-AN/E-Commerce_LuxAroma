@@ -1,5 +1,6 @@
 <?php
 
+    use Illuminate\Support\Facades\Hash;
     use Illuminate\Support\Facades\Route;
     use Illuminate\Support\Facades\Artisan;
     use App\Http\Controllers\AdminController;
@@ -15,8 +16,9 @@
     use App\Http\Controllers\PayPalController;
     use App\Http\Controllers\NotificationController;
     use App\Http\Controllers\HomeController;
+    use App\Http\Controllers\AfiliatorController;
+    use App\Http\Controllers\AfiliatorTransactionController;
     use \UniSharp\LaravelFilemanager\Lfm;
-
     /*
     |--------------------------------------------------------------------------
     | Web Routes
@@ -61,19 +63,10 @@
         return view('frontend.pages.faq');
     })->name('faq');
 
-// Frontend Routes
-    Route::get('/privacypolicy', function () {
-        return view('frontend.pages.privacypolicy');
-    })->name('privacypolicy');
-
-// Frontend Routes
-    Route::get('/termconditions', function () {
-        return view('frontend.pages.termconditions');
-    })->name('termconditions');
-
     Route::get('/home', [FrontendController::class, 'index']);
     Route::get('/about-us', [FrontendController::class, 'aboutUs'])->name('about-us');
     Route::get('/contact', [FrontendController::class, 'contact'])->name('contact');
+    Route::get('/afiliate', [FrontendController::class, 'afiliate'])->name('afiliate');
     Route::post('/contact/message', [MessageController::class, 'store'])->name('contact.store');
     Route::get('product-detail/{slug}', [FrontendController::class, 'productDetail'])->name('product-detail');
     Route::post('/product/search', [FrontendController::class, 'productSearch'])->name('product.search');
@@ -210,6 +203,15 @@
         Route::get('change-password', [HomeController::class, 'changePassword'])->name('user.change.password.form');
         Route::post('change-password', [HomeController::class, 'changPasswordStore'])->name('change.password');
 
+    });
+    Route::group(['prefix' => '/afiliator', 'middleware' => ['auth', 'afiliator']], function () {
+        Route::get('/dashboard', [AfiliatorController::class, 'index'])->name('afiliator.dashboard');
+        Route::resource('transactions', AfiliatorTransactionController::class);
+        Route::get('/revenue', [AfiliatorController::class, 'revenue'])->name('afiliator.revenue');
+        Route::get('/cashout', [AfiliatorController::class, 'cashout'])->name('afiliator.cashout');
+    });
+    Route::group(['prefix' => '/admin', 'middleware' => ['auth', 'admin']], function () {
+        Route::get('/afiliator-transactions', [AfiliatorController::class, 'allTransactions'])->name('admin.afiliator-transactions');
     });
 
     Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'auth']], function () {
