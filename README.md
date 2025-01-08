@@ -2,7 +2,7 @@
 
  <img src="public/photos/gambar 1.png">
 
- <img src="public/photos/gambar 8.png">
+ <img src="public/photos/gambar 2.png">
  
  <img src="public/photos/gambar 7.png">
 
