@@ -39,9 +39,9 @@
 						<div class="single-footer links">
 							<h4>Customer Service</h4>
 							<ul>
-								<li><a href="#">Payment Methods</a></li>
-								<li><a href="#">Money-back</a></li>
-								<li><a href="#">Returns</a></li>
+								<li><a href="{{route('paymentmethods')}}">Payment Methods</a></li>
+								<li><a href="{{route('moneyback')}}">Money-back</a></li>
+								<li><a href="{{route('return')}}">Returns</a></li>
 								<li><a href="{{route('order.track')}}">Shipping</a></li>
 								<li><a href="{{route('privacypolicy')}}">Privacy Policy</a></li>
 							</ul>

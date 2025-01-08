@@ -64,6 +64,21 @@
     })->name('faq');
 
 // Frontend Routes
+    Route::get('/paymentmethods', function () {
+        return view('frontend.pages.paymentmethods');
+    })->name('paymentmethods');
+    
+// Frontend Routes
+Route::get('/moneyback', function () {
+    return view('frontend.pages.moneyback');
+})->name('moneyback');
+
+// Frontend Routes
+Route::get('/return', function () {
+    return view('frontend.pages.return');
+})->name('return');
+
+// Frontend Routes
     Route::get('/privacypolicy', function () {
         return view('frontend.pages.privacypolicy');
     })->name('privacypolicy');
